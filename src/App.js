@@ -1,11 +1,17 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import faker from 'faker';
+
+
 import './App.css';
+import Header from './components/Header';
+import Section from './components/Section';
 
 function App() {
   return (
-    <div className="App">
-      hello!
-    </div>
+    <>
+    <Header></Header>
+    <Section></Section>
+    </>
   );
 }
 
