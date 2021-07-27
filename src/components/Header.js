@@ -5,10 +5,10 @@ function Header() {
     return (
         <>
         <header>
-          <span class="logo-title">Pet Conversation</span>
-          <div class="userInfo">
-            <img src={faker.image.animals()} class="userImg" />
-            <span class="userName">Dongbaek</span>
+          <span className="logo-title">Pet Conversation</span>
+          <div className="userInfo">
+            <img src={faker.image.animals()} className="userImg" />
+            <span className="userName">Dongbaek</span>
           </div>
         </header>
         </>
