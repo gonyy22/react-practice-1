@@ -4,11 +4,23 @@ import faker from 'faker';
 function Section() {
 
         const [isButtonClicked, setIsButtonClicked] = useState(false);
+        const [isSubmitMsg, setIsSubmitMsg] = useState('');
 
         function handleClick() {
-        setIsButtonClicked(true);
+        setIsButtonClicked(!isButtonClicked);
         }
 
+        function submitMsg(){
+          alert('sendmsg:' + isSubmitMsg);
+        }
+
+        function onChange(e){
+          setIsSubmitMsg(e.target.value);
+        }
+
+        function onSend(){
+          setIsSubmitMsg(isSubmitMsg);
+        }
     return (
         <>
 <section>
@@ -16,33 +28,36 @@ function Section() {
         isButtonClicked 
         ? (
           <>
-            <button class="backBtn">뒤로가기</button>
-            <div class="inner-section">
-              <div class="dialog-container">
-                <div class="dialog-box">
-                  <div class="userInfoWrap">
-                    <img src={faker.image.animals()} class="userImg" />
-                    <span class="userName">박동백</span>
+            <button className="backBtn" onClick={handleClick}>뒤로가기</button>
+            <div className="inner-section">
+              <div className="dialog-container">
+                <div className="dialog-box">
+                  <div className="userInfoWrap">
+                    <img src={faker.image.animals()} className="userImg" />
+                    <span className="userName">박동백</span>
                   </div>
                   <p>안녕! 내 이름은 박동백이야!</p>
                  </div>
-                 <div class="dialog-box">
-                  <div class="userInfoWrap">
-                    <img src={faker.image.animals()} class="userImg" />
-                    <span class="userName">박동백</span>
+                 <div className="dialog-box">
+                  <div className="userInfoWrap">
+                    <img src={faker.image.animals()} className="userImg" />
+                    <span className="userName">박동백</span>
                   </div>
                   <p>안녕! 내 이름은 박동백이야!</p>
                  </div>
-                <input type="text" placeholder="텍스트를 입력하세요!" class="textInput"></input>
+                 <form onSubmit={submitMsg}>
+                   <input type="text" onChange={onChange} value={isSubmitMsg} placeholder="텍스트를 입력하세요!" className="textInput" />
+                   <button type="submit" onClick={onSend} value="send" className="textSubmitBtn">send</button>
+                 </form>
               </div>
             </div>
             </>
         )
         :  (
           <>
-          <div class="inner-section">
+          <div className="inner-section">
             <h1>Welcome!</h1>
-            <button class="participate-btn" onClick={handleClick}>대화에 참여하기</button>
+            <button className="participate-btn" onClick={handleClick}>대화에 참여하기</button>
             </div>
           </>
         )
