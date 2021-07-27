@@ -17,7 +17,9 @@ section .participate-btn { width:250px; height:60px; display:block; margin:0 aut
 
 section .backBtn { width:100px; height:30px; position:fixed; top:80px; left:20px; border:2px solid black; border-radius:10px; background-color: transparent; }
 section .dialog-container { height:100%; }
-section .dialog-container .textInput { width:300px; height:30px; display:block; margin:50px auto 0; }
+section .dialog-container form { width:500px; height:30px; display:block; margin:70px auto 0; }
+section .dialog-container .textInput { width:300px; height:30px; display:inline-block; }
+section .dialog-container .textSubmitBtn { width:100px; height:36px; display:inline-block; margin:50px 0 0 10px; border:none; background-color:black; color:white; }
 section .dialog-container .dialog-box { width:700px; height:140px; position:relative; margin:0 auto 20px; border:2px solid black; border-radius: 15px;; }
 section .dialog-container .dialog-box .userInfoWrap { position:absolute; left:20px; top:20px; }
 section .dialog-container .dialog-box .userImg { width:50px; height:50px; display:inline-block; margin:0 10px 0 0; vertical-align: middle; border-radius: 50%; }
