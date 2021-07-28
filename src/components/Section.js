@@ -5,22 +5,25 @@ function Section() {
 
         const [isButtonClicked, setIsButtonClicked] = useState(false);
         const [isSubmitMsg, setIsSubmitMsg] = useState('');
+        const [isInputMsg, setIsInputMsg] = useState('');
 
         function handleClick() {
-        setIsButtonClicked(!isButtonClicked);
+          setIsButtonClicked(!isButtonClicked);
         }
 
-        function submitMsg(){
-          alert('sendmsg:' + isSubmitMsg);
+        function submitMsg(e){
+          e.preventDefault();
+          setIsInputMsg(isSubmitMsg);
+          setIsSubmitMsg('');
         }
 
         function onChange(e){
           setIsSubmitMsg(e.target.value);
         }
 
-        function onSend(){
-          setIsSubmitMsg(isSubmitMsg);
-        }
+        // function onSend(){
+        //   setClearMsg('');
+        // }
     return (
         <>
 <section>
@@ -36,18 +39,19 @@ function Section() {
                     <img src={faker.image.animals()} className="userImg" />
                     <span className="userName">박동백</span>
                   </div>
-                  <p>안녕! 내 이름은 박동백이야!</p>
+                  <p>{isInputMsg}</p>
                  </div>
-                 <div className="dialog-box">
+                 {/* <div className="dialog-box">
                   <div className="userInfoWrap">
                     <img src={faker.image.animals()} className="userImg" />
                     <span className="userName">박동백</span>
                   </div>
                   <p>안녕! 내 이름은 박동백이야!</p>
-                 </div>
+                 </div> */}
                  <form onSubmit={submitMsg}>
                    <input type="text" onChange={onChange} value={isSubmitMsg} placeholder="텍스트를 입력하세요!" className="textInput" />
-                   <button type="submit" onClick={onSend} value="send" className="textSubmitBtn">send</button>
+                   <button type="submit" value="send" className="textSubmitBtn">send</button>
+                   {/* <button type="submit" onClick={onSend} value="send" className="textSubmitBtn">send</button> */}
                  </form>
               </div>
             </div>
