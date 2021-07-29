@@ -1,29 +1,28 @@
 import React, { useState } from 'react';
-import faker from 'faker';
+
+import Home from './Home';
+import InputForm from './InputForm';
+import DialogBox from './DialogBox';
 
 function Section() {
 
         const [isButtonClicked, setIsButtonClicked] = useState(false);
-        const [isSubmitMsg, setIsSubmitMsg] = useState('');
-        const [isInputMsg, setIsInputMsg] = useState('');
+        const [inputValue, setInputValue] = useState('');
+        const [dialog, setDialog] = useState('');
 
         function handleClick() {
           setIsButtonClicked(!isButtonClicked);
         }
 
-        function submitMsg(e){
+        function handleSubmit(e) {
           e.preventDefault();
-          setIsInputMsg(isSubmitMsg);
-          setIsSubmitMsg('');
+          setDialog(inputValue);
+          setInputValue('');
         }
 
-        function onChange(e){
-          setIsSubmitMsg(e.target.value);
+        function handleChange(e) {
+          setInputValue(e.target.value);
         }
-
-        // function onSend(){
-        //   setClearMsg('');
-        // }
     return (
         <>
 <section>
@@ -32,38 +31,12 @@ function Section() {
         ? (
           <>
             <button className="backBtn" onClick={handleClick}>뒤로가기</button>
-            <div className="inner-section">
-              <div className="dialog-container">
-                <div className="dialog-box">
-                  <div className="userInfoWrap">
-                    <img src={faker.image.animals()} className="userImg" />
-                    <span className="userName">박동백</span>
-                  </div>
-                  <p>{isInputMsg}</p>
-                 </div>
-                 {/* <div className="dialog-box">
-                  <div className="userInfoWrap">
-                    <img src={faker.image.animals()} className="userImg" />
-                    <span className="userName">박동백</span>
-                  </div>
-                  <p>안녕! 내 이름은 박동백이야!</p>
-                 </div> */}
-                 <form onSubmit={submitMsg}>
-                   <input type="text" onChange={onChange} value={isSubmitMsg} placeholder="텍스트를 입력하세요!" className="textInput" />
-                   <button type="submit" value="send" className="textSubmitBtn">send</button>
-                   {/* <button type="submit" onClick={onSend} value="send" className="textSubmitBtn">send</button> */}
-                 </form>
-              </div>
-            </div>
+              <DialogBox dialog={dialog}/>
+              <InputForm handleSubmit={handleSubmit} handleChange={handleChange} inputValue={inputValue} />
             </>
         )
         :  (
-          <>
-          <div className="inner-section">
-            <h1>Welcome!</h1>
-            <button className="participate-btn" onClick={handleClick}>대화에 참여하기</button>
-            </div>
-          </>
+          <Home handleClick={handleClick} />
         )
       }
     </section>        
