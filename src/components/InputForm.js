@@ -1,5 +1,7 @@
 import React from 'react';
 
+import '../css/Form.css';
+
 function InputForm(props) {
     return (
       <>

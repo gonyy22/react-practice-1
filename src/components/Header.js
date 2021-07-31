@@ -1,6 +1,8 @@
 import React from 'react';
 import faker from 'faker';
 
+import '../css/Header.css';
+
 function Header() {
     return (
         <>

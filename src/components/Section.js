@@ -2,13 +2,14 @@ import React, { useState } from 'react';
 
 import Home from './Home';
 import InputForm from './InputForm';
-import DialogBox from './DialogBox';
+import GuestbookBox from './GuestbookBox';
+import '../css/Section.css';
 
 function Section() {
 
         const [isButtonClicked, setIsButtonClicked] = useState(false);
         const [inputValue, setInputValue] = useState('');
-        const [dialog, setDialog] = useState('');
+        const [guestBook, setguestBook] = useState('');
 
         function handleClick() {
           setIsButtonClicked(!isButtonClicked);
@@ -16,8 +17,10 @@ function Section() {
 
         function handleSubmit(e) {
           e.preventDefault();
-          setDialog(inputValue);
+          setguestBook(inputValue);
           setInputValue('');
+
+          React.createElement('p', {}, guestBook);
         }
 
         function handleChange(e) {
@@ -31,7 +34,7 @@ function Section() {
         ? (
           <>
             <button className="backBtn" onClick={handleClick}>뒤로가기</button>
-              <DialogBox dialog={dialog}/>
+              <GuestbookBox guestBook={guestBook}/>
               <InputForm handleSubmit={handleSubmit} handleChange={handleChange} inputValue={inputValue} />
             </>
         )
