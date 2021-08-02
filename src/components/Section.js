@@ -9,7 +9,7 @@ function Section() {
 
         const [isButtonClicked, setIsButtonClicked] = useState(false);
         const [inputValue, setInputValue] = useState('');
-        const [guestBook, setguestBook] = useState('');
+        const [guestBookTextArr, setGuestBookTextArr] = useState([]);
 
         function handleClick() {
           setIsButtonClicked(!isButtonClicked);
@@ -17,10 +17,14 @@ function Section() {
 
         function handleSubmit(e) {
           e.preventDefault();
-          setguestBook(inputValue);
           setInputValue('');
 
-          React.createElement('p', {}, guestBook);
+          //setState 안에서 이전 값이 필요하다면 반드시 함수로 넘겨
+          //EX_ setCounter((prevCounter) => prevCounter + 1)
+
+          // const a = [1,2,3];
+          // const b = [...a, 4]; // -> [1,2,3,4]
+          setGuestBookTextArr((prevGuestBookTextArr) => [...prevGuestBookTextArr, inputValue]);
         }
 
         function handleChange(e) {
@@ -34,7 +38,7 @@ function Section() {
         ? (
           <>
             <button className="backBtn" onClick={handleClick}>뒤로가기</button>
-              <GuestbookBox guestBook={guestBook}/>
+              {guestBookTextArr.map(text => <GuestbookBox text={text} />)}
               <InputForm handleSubmit={handleSubmit} handleChange={handleChange} inputValue={inputValue} />
             </>
         )

@@ -12,7 +12,7 @@ function GuestbookBox(props) {
                 <img src={faker.image.animals()} className="userImg" />
                 <span className="userName">박동백</span>
               </div>
-              <p>{props.guestBook}</p>
+              <p>{props.text}</p>
               </div>
               {/* <div className="guestBook-box">
               <div className="userInfoWrap">
