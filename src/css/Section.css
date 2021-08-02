@@ -1,12 +1,13 @@
-.inner-section { position:relative; top:50%;transform: translateY(-50%); margin:-60px 0 0 0;}
 
 section { height:100%; margin:-60px 0 0; } 
-section h1 { text-align:center; font-size:100px; font-weight:600; margin: 0 0 50px 0;}
-section .participate-btn { width:250px; height:60px; display:block; margin:0 auto; font-size:20px; font-weight:600; color:white; background-color:black; border:none; border-radius:15px; cursor:pointer; }
-section .backBtn { width:100px; height:30px; position:fixed; top:80px; left:20px; border:2px solid black; border-radius:10px; background-color: transparent; cursor:pointer; }
-section .guestBook-container { height:100%; }
-section .guestBook-container .guestBook-box { width:700px; height:140px; position:relative; margin:0 auto 20px; border:2px solid black; border-radius: 15px;; }
-section .guestBook-container .guestBook-box .userInfoWrap { position:absolute; left:20px; top:20px; }
-section .guestBook-container .guestBook-box .userImg { width:50px; height:50px; display:inline-block; margin:0 10px 0 0; vertical-align: middle; border-radius: 50%; }
-section .guestBook-container .guestBook-box .userName { font-size:15px; font-weight:600; }
-section .guestBook-container .guestBook-box p { position:absolute; left:20px; bottom:30px; font-size:15px; }
+section h1 { text-align:center; font-size:100px; font-weight:600; margin: 0 0 50px 0; color:#534847; } 
+section .participate-btn { width:250px; height:60px; display:block; margin:0 auto; font-size:20px; font-weight:600; color:white; background-color:#534847; border:none; border-radius:15px; cursor:pointer; }
+section .backBtn { width:120px; height:40px; position:fixed; top:80px; left:20px; border:none; border-radius:4px; background-color:#9B8281; color:white; cursor:pointer; }
+section .guestBook-inner-section { width:450px; height:600px; position:relative; top:50%; transform: translateY(-50%); margin:0 auto; overflow-y:scroll; }
+section .guestBook-inner-section::-webkit-scrollbar { width:5px; background-color: #534847; }
+section .guestBook-inner-section::-webkit-scrollbar-thumb { width:5px; background-color: #D09E88; }
+section .guestBook-inner-section::-webkit-scrollbar-track { width:5px; background-color: #534847; }
+section .guestBook-inner-container .guestBook-box { width:400px; height:120px; margin:0 auto 20px; padding:10px; background-color:#FADAD8; border-radius:8px; word-break:break-all; }
+section .guestBook-inner-container .guestBook-box .userImg { width:50px; height:50px; display:inline-block; margin:0 10px 0 0; vertical-align: middle; border-radius: 50%; }
+section .guestBook-inner-container .guestBook-box .userName { font-size:15px; font-weight:600; color:#534847; }
+section .guestBook-inner-container .guestBook-box p { margin:10px 0 0; font-size:15px; color:#534847; }
