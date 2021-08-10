@@ -19,7 +19,7 @@ function Section() {
           e.preventDefault();
           setInputValue('');
 
-          //setState 안에서 이전 값이 필요하다면 반드시 함수로 넘겨
+          //setState 안에서 이전 값이 필요하다면 반드시 함수로 넘겨야한다.
           //EX_ setCounter((prevCounter) => prevCounter + 1)
 
           // const a = [1,2,3];

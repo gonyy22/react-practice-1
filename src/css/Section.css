@@ -1,13 +1,13 @@
 
 section { height:100%; margin:-60px 0 0; } 
-section h1 { text-align:center; font-size:100px; font-weight:600; margin: 0 0 50px 0; color:#534847; } 
-section .participate-btn { width:250px; height:60px; display:block; margin:0 auto; font-size:20px; font-weight:600; color:white; background-color:#534847; border:none; border-radius:15px; cursor:pointer; }
-section .backBtn { width:120px; height:40px; position:fixed; top:80px; left:20px; border:none; border-radius:4px; background-color:#9B8281; color:white; cursor:pointer; }
+section h1 { text-align:center; font-size:100px; font-weight:600; margin: 0 0 50px 0; color:#1e2022; } 
+section .participate-btn { width:250px; height:60px; display:block; margin:0 auto; font-size:20px; font-weight:600; color:white; background-color:#52616a; border:none; border-radius:15px; cursor:pointer; }
+section .backBtn { width:120px; height:40px; position:fixed; top:80px; left:20px; border:none; border-radius:4px; background-color:#52616a; color:white; cursor:pointer; }
 section .guestBook-inner-section { width:450px; height:600px; position:relative; top:50%; transform: translateY(-50%); margin:0 auto; overflow-y:scroll; }
-section .guestBook-inner-section::-webkit-scrollbar { width:5px; background-color: #534847; }
-section .guestBook-inner-section::-webkit-scrollbar-thumb { width:5px; background-color: #D09E88; }
-section .guestBook-inner-section::-webkit-scrollbar-track { width:5px; background-color: #534847; }
-section .guestBook-inner-container .guestBook-box { width:400px; height:120px; margin:0 auto 20px; padding:10px; background-color:#FADAD8; border-radius:8px; word-break:break-all; }
+section .guestBook-inner-section::-webkit-scrollbar { width:5px; background-color: #fff; }
+section .guestBook-inner-section::-webkit-scrollbar-thumb { width:5px; background-color: #52616a; }
+section .guestBook-inner-section::-webkit-scrollbar-track { width:5px; background-color: #fff; }
+section .guestBook-inner-container .guestBook-box { width:400px; height:120px; margin:0 auto 20px; padding:10px; background-color:#c9d6de; border-radius:8px; word-break:break-all; }
 section .guestBook-inner-container .guestBook-box .userImg { width:50px; height:50px; display:inline-block; margin:0 10px 0 0; vertical-align: middle; border-radius: 50%; }
-section .guestBook-inner-container .guestBook-box .userName { font-size:15px; font-weight:600; color:#534847; }
-section .guestBook-inner-container .guestBook-box p { margin:10px 0 0; font-size:15px; color:#534847; }
+section .guestBook-inner-container .guestBook-box .userName { font-size:15px; font-weight:600; color:#52616a; }
+section .guestBook-inner-container .guestBook-box p { margin:10px 0 0; font-size:15px; color:#52616a; }
