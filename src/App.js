@@ -1,17 +1,23 @@
 import React, { useState } from 'react';
-import faker from 'faker';
-
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import './App.css';
-import Header from './components/Header';
+import Home from './components/Home';
 import Section from './components/Section';
 
 function App() {
   return (
-    <>
-    <Header></Header>
-    <Section></Section>
-    </>
+    <BrowserRouter>
+    <Switch>
+    <Route exact path="/" component={Home}/>
+    <Route exact path="/Section" component={Section}/>
+    </Switch>
+    </BrowserRouter>
+
+    // <>
+    // <Header />
+    // <Section />
+    // </>
   );
 }
 

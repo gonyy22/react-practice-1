@@ -1,19 +1,15 @@
 import React, { useState } from 'react';
 
-import Home from './Home';
+import Header from './Header';
 import InputForm from './InputForm';
 import GuestbookBox from './GuestbookBox';
 import '../css/Section.css';
+import { Link } from 'react-router-dom';
 
 function Section() {
 
-        const [isButtonClicked, setIsButtonClicked] = useState(false);
         const [inputValue, setInputValue] = useState('');
         const [guestBookTextArr, setGuestBookTextArr] = useState([]);
-
-        function handleClick() {
-          setIsButtonClicked(!isButtonClicked);
-        }
 
         function handleSubmit(e) {
           e.preventDefault();
@@ -32,24 +28,15 @@ function Section() {
         }
     return (
         <>
-<section>
-      {
-        isButtonClicked                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
-        ? (
-          <>
-            <button className="backBtn" onClick={handleClick}>뒤로가기</button>
+          <Header />
+          <section>
+            <Link className="backBtn" to="/">뒤로가기</Link>
             <div className="guestBook-inner-section">
               {guestBookTextArr.map(text => <GuestbookBox text={text} />)}
             </div>
-              <InputForm handleSubmit={handleSubmit} handleChange={handleChange} inputValue={inputValue} />
-            </>
-        )
-        :  (
-          <Home handleClick={handleClick} />
-        )
-      }
-    </section>        
-    </>
+            <InputForm handleSubmit={handleSubmit} handleChange={handleChange} inputValue={inputValue} />
+          </section>        
+      </>
     )
 }
 
