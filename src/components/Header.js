@@ -1,14 +1,17 @@
 import React from 'react';
+
+import faker from 'faker';
 import '../css/Header.css';
 
 function Header() {
-    return (
+
+    return ( 
         <>
         <header>
-          <span className="logo-title">Pet Conversation</span>
+          <span className="logo-title">Memo</span>
           <div className="userInfo">
-            {/* <img src={faker.image.animals()} className="userImg" /> */}
-            <span className="userName">Dongbaek</span>
+          <img src={faker.image.animals()} className="userImg" />
+            <span className="userName">User</span>
           </div>
         </header>
         </>

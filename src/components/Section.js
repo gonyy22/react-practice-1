@@ -7,9 +7,9 @@ import '../css/Section.css';
 import { Link } from 'react-router-dom';
 
 function Section() {
-
         const [inputValue, setInputValue] = useState('');
         const [guestBookTextArr, setGuestBookTextArr] = useState([]);
+        const [randomImageIndex, setRandomImageIndex] = React.useState(0);
 
         function handleSubmit(e) {
           e.preventDefault();
@@ -26,13 +26,14 @@ function Section() {
         function handleChange(e) {
           setInputValue(e.target.value);
         }
+
     return (
         <>
           <Header />
           <section>
             <Link className="backBtn" to="/">뒤로가기</Link>
             <div className="guestBook-inner-section">
-              {guestBookTextArr.map(text => <GuestbookBox text={text} />)}
+              {guestBookTextArr.map(text => <GuestbookBox text={text}/>)}
             </div>
             <InputForm handleSubmit={handleSubmit} handleChange={handleChange} inputValue={inputValue} />
           </section>        

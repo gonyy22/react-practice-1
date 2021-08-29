@@ -1,9 +1,9 @@
-section { height:100%; margin:-60px 0 0; } 
+section { height:100%; } 
 .backBtn { width:120px; height:40px; position:fixed; top:80px; left:20px; text-decoration:none; line-height:40px; text-align:center; font-size:12px; border:none; border-radius:4px; background-color:#52616a; color:white; cursor:pointer; }
 section .guestBook-inner-section::-webkit-scrollbar { width:5px; background-color: #fff; }
 section .guestBook-inner-section::-webkit-scrollbar-thumb { width:5px; background-color: #52616a; }
 section .guestBook-inner-section::-webkit-scrollbar-track { width:5px; background-color: #fff; }
 section .guestBook-inner-container .guestBook-box { width:400px; height:120px; margin:0 auto 20px; padding:10px; background-color:#c9d6de; border-radius:8px; word-break:break-all; }
-section .guestBook-inner-container .guestBook-box .userImg { width:50px; height:50px; display:inline-block; margin:0 10px 0 0; vertical-align: middle; border-radius: 50%; }
+section .guestBook-inner-container .guestBook-box .userImg { width:40px; height:40px; display:inline-block; margin:0 10px 0 0; vertical-align: middle; border-radius: 50%; }
 section .guestBook-inner-container .guestBook-box .userName { font-size:15px; font-weight:600; color:#52616a; }
 section .guestBook-inner-container .guestBook-box p { margin:10px 0 0; font-size:15px; color:#52616a; }

@@ -3,6 +3,6 @@ header .logo-title {  float:left; margin:0 0 0 20px; font-size:20px; font-weight
 header .logo-title::after { content:''; display:block; clear:both; }
 header .userInfo {float:right; margin:0 20px 0 0; line-height:55px; }
 header .userInfo::after { content:''; display:block; clear:both; }
-header .userInfo .userImg { width:50px; height:50px; display:inline-block; vertical-align: middle; border-radius: 50%; }
+header .userInfo .userImg { width:40px; height:40px; display:inline-block; vertical-align: middle; border-radius: 50%; }
 header .userInfo .userName { float:right; margin:0 0 0 15px; font-size:18px; font-weight:600; color:white; line-height:60px;}
 header .userInfo .userName::after { content:''; display:block; clear:both; }
